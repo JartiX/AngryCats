@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bd1rshktmpo2u"]
+
+[ext_resource type="Script" uid="uid://3nt8jvx56o8m" path="res://scripts/slingshot.gd" id="1_sling"]
+[ext_resource type="Texture2D" uid="uid://bvglta3h0sb3j" path="res://art/game/slingshot.png" id="2_tex"]
+[ext_resource type="PackedScene" path="res://scenes/cat.tscn" id="3_cat"]
+
+[node name="Slingshot" type="Node2D" unique_id=66253942]
+script = ExtResource("1_sling")
+cat_scene = ExtResource("3_cat")
+
+[node name="BandBack" type="Line2D" parent="." unique_id=1532551671]
+points = PackedVector2Array(20, -114, 0, -110)
+width = 8.0
+default_color = Color(0.35, 0.16, 0.16, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=609299592]
+position = Vector2(0, -64)
+texture = ExtResource("2_tex")
+
+[node name="BandFront" type="Line2D" parent="." unique_id=1445588911]
+z_index = 2
+points = PackedVector2Array(-20, -114, 0, -110)
+width = 8.0
+default_color = Color(0.35, 0.16, 0.16, 1)
+
+[node name="Pouch" type="Marker2D" parent="." unique_id=2053998584]
+position = Vector2(0, -110)
+
+[node name="Aim" type="Node2D" parent="." unique_id=1100673160]
+visible = false

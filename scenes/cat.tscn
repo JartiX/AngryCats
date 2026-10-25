@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dbklrahfm8ja7"]
+
+[ext_resource type="Script" uid="uid://b0tmgyisnwyw2" path="res://scripts/cat.gd" id="1_cat"]
+[ext_resource type="Texture2D" uid="uid://c2ecewfyt1tv8" path="res://art/game/mouse.png" id="2_tex"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cat"]
+radius = 28.0
+
+[node name="Cat" type="RigidBody2D" unique_id=251837922]
+collision_layer = 4
+collision_mask = 15
+mass = 1.5
+continuous_cd = 1
+linear_damp_mode = 1
+script = ExtResource("1_cat")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=202490293]
+texture = ExtResource("2_tex")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1231766050]
+shape = SubResource("CircleShape2D_cat")
